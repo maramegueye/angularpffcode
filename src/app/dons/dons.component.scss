@@ -1,0 +1,30 @@
+body {
+    background-color: #f0f0f0; /* Couleur d'arrière-plan */
+  }
+  .donation-form {
+    background-color: #fff; /* Couleur d'arrière-plan du formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  .donation-form h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+
+  }
+  label, input {
+    vertical-align: middle;
+  }
+  .btn-input{
+    height: 25px;
+  }
+  .btn-group{
+   
+    background: #FF6B2C;
+  }
+  .btn-orange{
+    background: #FF6B2C;
+  }
+  

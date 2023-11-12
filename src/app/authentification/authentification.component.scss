@@ -1,0 +1,68 @@
+body{
+    width: 1228px;
+    height: 697px;
+  background-image: url('/assets/image/loginfomr.jpg');
+  background-repeat: no-repeat;
+    
+    
+   
+}
+
+form{
+    padding: 200px 200px;
+    // width:400px;
+    height: 386px;
+    margin-left: 100px;
+   align-items: center;
+   
+}
+h1{
+
+
+color: #FFF;
+text-align: center;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+width: 100px;
+margin-left: 10px;
+text-transform: uppercase;
+
+
+}
+.input{
+    width: 368px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 10px;
+border: 1px solid #FFF;
+  
+    }
+    .label{
+    display: block;
+    font-size: 14px; 
+    color: #FFF;
+    margin-top: 10px;
+    }
+    .button{
+        display: block;
+        width: 368px;
+        height: 60px;
+        margin-top: 20px;
+        flex-shrink: 0; 
+        border-radius: 11px;
+        border: 1px solid rgba(255, 107, 44, 0.78);
+        background: #FFF; 
+         color: rgba(255, 107, 44, 0.68); 
+      
+    }
+p{
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    width: 200px;
+    margin-left: 100px;
+}

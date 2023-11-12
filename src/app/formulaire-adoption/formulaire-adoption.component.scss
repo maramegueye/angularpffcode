@@ -1,0 +1,270 @@
+.header{
+    padding: 50px 0;
+    background-color: white;
+    // background-image: url('../assets/image/logo.png');
+}
+.header .logo{
+height: 55px;
+object-fit: contain;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+}
+.main-menu li a{
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.main-menu li:last-child a{
+   
+    background: #FF6B2C;
+    padding: 16px 24px;
+    color: black;
+    gap: 10px;
+    border-radius: 8px;
+}
+.form{
+width: 520px;
+color: #000;
+margin-left: 120px;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+ 
+}
+section{
+width: 1090px;
+height: 676px;
+flex-shrink: 0;
+margin-left: 200px;
+
+}
+label, input {
+    vertical-align: middle;
+  }
+  .btn-input{
+    height: 25px;
+  }
+  .btn-group{
+   
+    background: #FF6B2C;
+  }
+  .btn-orange{
+    background: #FF6B2C;
+  }
+  .trois p{
+    font-weight: bold;
+  }
+  
+.trois{
+margin-left: 120px;
+ display: inline-flex;
+align-items: flex-start;
+gap: 23px;
+}
+form{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+   
+}
+form img{
+    width: 520px;
+    height: 614.545px;
+    flex-shrink: 0;
+}
+.label-text{
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    gap: 10px;
+    line-height: normal;
+    text-transform: uppercase; 
+}
+.group-form{
+    display: flex;
+    gap: 20px;
+}
+.form-controlese{
+display: flex;
+width: 520px;
+padding: 20px 16px;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+border: 1px solid #626262;
+}
+.form-control{
+    display: flex;
+    width: 250px;
+    padding: 20px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    color: #000;
+border: 1px solid #626262;
+}
+.form-controle{
+ display: flex;
+width: 250px;
+padding: 20px 16px;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+border: 1px solid #FF6B2C;
+}
+.form-controleess{
+ display: flex;
+width: 520px;
+height: 127px;
+padding: 20px 16px;
+align-items: flex-start;
+gap: 10px;
+flex-shrink: 0;
+}
+button{
+    display: flex;
+    width: 520px;
+    height: 63px;
+    padding: 11px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: white;
+    align-items: center;
+    border-radius: 11px;
+    background: #FF6B2C; 
+}
+footer{
+    width: 140px;
+    height: 450px;
+    flex-shrink: 0;
+    background: #343131;
+}
+// footer{
+//     width: 1440px;
+//     height: 450px;
+//     flex-shrink: 0;
+//     background: #343131;
+
+ 
+ .Contact{
+    display: block;
+    color: #9E9E9E;
+ }
+ .footer-content{
+ background-color:  #343131;
+ width: 1440px;
+ padding: 0px 0px;
+height: 600px;
+flex-shrink: 0;
+   
+   
+    
+ }
+
+ .footer-cols{
+    display: flex;
+    gap: 40px;
+    
+ }
+ input{
+    width: 329px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #8B8888;
+    background: #FFF;
+ }
+ .signup{
+    display: inline-flex;
+    height: 47px;
+    padding: 5px 140px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FF6B2C;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+ }
+ .menu-footer{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 200px;
+    margin-right: 20px;
+    
+    
+   
+ }
+ .p-input{
+    margin-right: 230px;
+ }
+ .content-footer{
+    justify-content: center;
+    padding: 90px 24px;
+    text-align: center;
+ }
+ .icons{
+    padding:  96px 0px;
+    gap: 30px;
+    
+ }
+ .icons img{
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  
+
+ }
+ .position-relative{
+    display: inline-block;
+    gap: 0px;
+}
+.menu-footer{
+    color: #9D9D9D;
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    
+}
+.button-b2{
+border-radius: 8px;
+border: 1px solid #8B8888;
+background: #FFF;
+}
+.button-fo{
+color: #FFF;
+border-radius: 8px;
+background: #FF6B2C;
+}

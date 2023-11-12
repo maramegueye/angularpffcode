@@ -1,0 +1,310 @@
+body {
+    background: white;
+ }
+ 
+ .header {
+     background: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100px;
+     flex-shrink: 0;
+ }
+ .header .logo { 
+     height: 30px;
+     object-fit: contain;
+ }
+ .main-menu {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     gap: 40px;
+     list-style: none;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 90px;
+    
+    }
+    .header .main-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+    }
+    .header .main-menu li a{
+        color: black;
+        text-decoration: none;
+    }
+    .main-menu li:last-child a{
+        background: #FF6B2C;
+        padding:10px 19px ;
+        border-radius: 10px;
+        color: rgba(0, 0, 0, 0.75);
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .apres-header{
+       background-image: url(/assets/images/Group82.jpg);
+       background-repeat: no-repeat;
+       
+    }
+    .contenu{
+       padding: 188px 24px;
+    }
+    .centre{
+       color: #FFF;
+       font-size: 36px;
+       font-style: normal;
+       font-weight: 700;
+       line-height: normal;
+       
+    }
+    .p1{
+       color: #FFF;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 600;
+       line-height: normal;
+       padding: 16px;
+    }
+    .bouton-plus{
+       color: #FAF2F2;
+       text-align: center;
+       font-size: 14px;
+       font-style: normal;
+       border-radius: 11px;
+       background: #FF6B2C;
+       padding:  16px;
+       justify-content: center;
+       gap: 10px;
+       text-decoration: none;
+    }
+    .nos-galerie{
+       color: #000;
+       padding: 66px 36px;
+       text-align: center;
+       font-size: 36px;
+       font-style: normal;
+       font-weight: 700;
+       line-height: normal;
+    }
+    .images-galeries{
+       padding: 10px;
+    }
+    .realisation{
+       display: flex;
+       gap: 30px;
+    }
+    .p-h1{
+        display: block;
+        gap: 20px;
+     }
+     .svg-image {
+        padding: 36px;
+        height: 135px;
+        display: block;
+        
+     }
+     .pp-Accueil{
+        color: #9E9E9E;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+     }
+     .nos-realisations{
+        padding: 66px 36px;
+     }
+     .nosrealisation{
+        color: #000;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        }
+        .p-enfant{
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23px; 
+        
+         }
+         .adoption{
+            
+            background-repeat: no-repeat;
+            background-image: url(/assets/image/Rectangle25.png);
+            
+         }
+         .content{
+            justify-content: center;
+            padding: 188px 24px;
+            text-align: center;
+         }
+         .faireAdoption{
+            color: #FF6B2C;
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding:  16px;
+         }
+         .Contact{
+            display: block;
+            color: #9E9E9E;
+         }
+         .footer-content{
+            background-color:  #343131;
+           
+           
+            
+         }
+         .footer-cols{
+            display: flex;
+            gap: 40px;
+            
+         }
+         input{
+            width: 329px;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid #8B8888;
+            background: #FFF;
+         }
+         .signup{
+            display: inline-flex;
+            height: 47px;
+            padding: 5px 140px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: #FF6B2C;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+         }
+         .menu-footer{
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 200px;
+            margin-right: 20px;
+            
+            
+           
+         }
+         .p-input{
+            margin-right: 230px;
+         }
+         .content-footer{
+            justify-content: center;
+            padding: 90px 24px;
+            text-align: center;
+         }
+         .icons{
+            padding:  96px 0px;
+            gap: 30px;
+            
+         }
+         .icons img{
+            justify-content: center;
+            text-align: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+          
+        
+         }
+         .Rendez-vous{
+            color: #FF6B2C;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .Liste{
+            color: #000;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .adoptionCard{
+            display: flex;
+            border-radius: 4px;
+            border: 1px solid #FF6B2C;
+            background: #FFF9F9;
+            width: 159px;
+            height: 176px;
+            flex-shrink: 0;
+        }
+        .card-body{
+            padding: 22px;
+            flex: 1 1 auto;
+            box-sizing: border-box;
+            padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+            color: var(--bs-card-color);
+            justify-content: center;
+        }
+
+        .cadrdbodyAdoption{
+            display: flex;
+            padding: 53px;
+            gap: 30px;
+            justify-content: center;
+        }
+        .listeAdoption{
+            width: 250px;
+            height: 423px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid #FF6B2C;
+        
+        background: #FFF;
+        }
+        .cardbody1{
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+        .cardbody2{
+            display: block;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .cardbody3{
+            display: block;
+            color: rgba(0, 0, 0, 0.55);
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .listeAdoption img{
+            border-radius: 8px 8px 0px 0px;
+        }
+        .age{
+            text-align: center;
+            padding: 12px;
+        }               
+                               
