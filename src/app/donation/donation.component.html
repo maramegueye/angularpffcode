@@ -18,59 +18,64 @@
                 <li><a routerLink="/activites">Nos Activites</a></li>
                 <li><a routerLink="/propos">A propos</a></li>
                 <li><a routerLink="/contact">Nous Contacter</a></li> 
-                <li><a routerLink="/dons">Faire Don</a></li>  
+                <li><a routerLink="/donation">Faire Don</a></li>  
             </ul>
         </div>
         </div>
         </div>
         </div>
     </header>
+    <div>{{donation|json}}</div>
 
     <div class="container">
         <div class="donation-form">
             <h2>Faire un don</h2>
-            <form #demandeForm="ngForm">
-              <div class="trois">
-                <p>Genre :</p>
-                <div class="btn-group" >
-                  <label class="btn btn-orange" for="madame">
-                    <input class="btn-input" id="madame" type="radio" name="titre" value="madame"> Madame
-                  </label>
-                  <label class="btn btn-orange" for="monsieur">
-                    <input class="btn-input" id="monsieur" type="radio" name="titre"  value="monsieur"> Monsieur
-                  </label>
-                  <label class="btn btn-orange" for="mademoiselle">
-                    <input class="btn-input" id="mademoiselle" type="radio" name="titre"  value="mademoiselle"> Mademoiselle
-                  </label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Nom complet :</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-              </div>
-          
-              <div class="form-group">
-                <label for="email">Adresse e-mail :</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="phone">Numéro de téléphone :</label>
-                <input  type="tel" id="phone" name="phone" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="amount">Montant du don :</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                  </div>
-                  <input type="number" id="amount" name="amount" class="form-control" required>
-                </div>
-              </div><br>
-              <div class="form-group">
-                <button type="submit" class="btn btn-orange btn-lg">Envoyer</button>
-              </div>
-              
-            </form>
+          <form #demandeForm="ngForm" (ngSubmit)="enregistrer()">
+  <div class="trois">
+    <p>Genre :</p>
+    <!-- ... (votre code existant) ... -->
+  </div>
+  <div class="form-group">
+    <label for="name">Nom complet :</label>
+    <input type="text" id="name" name="nomcomplet" class="form-control" required [(ngModel)]="donation.nomcomplet">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="donation.email">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Numéro de téléphone :</label>
+    <input type="tel" id="phone" name="telephone" class="form-control" required [(ngModel)]="donation.telephone">
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Montant du don :</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+      </div>
+      <input type="number" id="montant" name="amount" class="form-control" required [(ngModel)]="donation.montant">
+    </div>
+  </div>
+
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="operation" name="operation" [(ngModel)]="donation.operation">
+    <label class="form-check-label" for="operation">Opération</label>
+  </div>
+
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="reference" name="reference" [(ngModel)]="donation.reference">
+    <label class="form-check-label" for="reference">Référence</label>
+  </div>
+
+  <br>
+  <div class="form-group">
+    <button type="submit" class="btn btn-orange btn-lg" click="enregistrer()">Envoyer</button>
+  </div>
+</form>
+
+            
           </div>
     </div><br><br>
     <footer class="footer-content">

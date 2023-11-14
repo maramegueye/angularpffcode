@@ -1,0 +1,79 @@
+body {
+    background: white;
+ }
+ 
+ .header {
+     background: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100px;
+     flex-shrink: 0;
+ }
+ .header .logo { 
+     height: 30px;
+     object-fit: contain;
+ }
+ .main-menu {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     gap: 40px;
+     list-style: none;
+ }
+ .header-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 90px;
+ 
+ }
+ .header .main-menu {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     gap: 20px;
+     list-style: none;
+ }
+ .header .main-menu li a{
+     color: black;
+     text-decoration: none;
+ }
+ .main-menu li:last-child a{
+     background: #FF6B2C;
+     padding:10px 19px ;
+     border-radius: 10px;
+     color: rgba(0, 0, 0, 0.75);
+     text-align: center;
+     font-family: Inter;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ }
+ 
+ .apres-header{
+    background-image: url('/assets/image/Group82.jpg');
+    background-repeat: no-repeat;
+    
+ }
+ 
+ .contenu{
+    padding: 188px 24px;
+ }
+// .container {
+//     max-width: 600px;
+//   }
+  
+  .border {
+    border: 1px solid #ddd;
+  }
+  
+  .rounded {
+    border-radius: 10px;
+  }
+  
+  .p-4 {
+    padding: 1.5rem;
+  }
+  

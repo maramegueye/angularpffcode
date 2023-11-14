@@ -5,7 +5,8 @@ import { ActivitesComponent } from './activites/activites.component';
 import { ProposComponent } from './propos/propos.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormulaireAdoptionComponent } from './formulaire-adoption/formulaire-adoption.component';
-import { DonsComponent } from './dons/dons.component';
+import { DonationComponent } from './donation/donation.component';
+
 // import { Error404Component } from './error404/error404.component';
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'propos', component: ProposComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'formulaire-adoption',component: FormulaireAdoptionComponent},
-  { path: 'dons',component:DonsComponent}
+  { path: 'donation',component: DonationComponent}
+ 
 
   // {path:"**",component:Error404Component}
 ];
