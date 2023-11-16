@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';  // Correction de l'importation
 
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
@@ -14,11 +13,10 @@ import { ListeRendezVousComponent } from './liste-rendez-vous/liste-rendez-vous.
 import { ListeEmployesComponent } from './liste-employes/liste-employes.component';
 import { FormulaireAdoptionComponent } from './formulaire-adoption/formulaire-adoption.component';
 import { RegisterAdoptionComponent } from './register-adoption/register-adoption.component';
-import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-
-
+import { ListEnfantComponent } from './list-enfant/list-enfant.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,15 +31,16 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     ListeEmployesComponent,
     FormulaireAdoptionComponent,
     RegisterAdoptionComponent,
-    AdminComponent
+    AdminComponent,
+    ListEnfantComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgModule,
     HttpClientModule,
-    FormsModule,
-    SlickCarouselModule
-  
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+<div *ngFor="let enfant of enfants">
+    <p>Photo: {{ enfant.photo}}</p>
+    <p>Nom: {{ enfant.nom }}</p>
+    <p>Prénom: {{ enfant.prenom }}</p>
+    <p>Âge: {{ enfant.age }}</p>
+    <p>Date de naissance: {{ enfant.date_naissance }}</p>
+    <!-- Ajoutez d'autres propriétés selon les besoins -->
+    <hr>
+  </div>
+  
+  <form #enfantForm="ngForm" (ngSubmit)="saveEnfant()">
+    <label>Nom: <input [(ngModel)]="nom" name="nom" required /></label>
+    <label>Prenom: <input [(ngModel)]="prenom" name="prenom" required /></label>
+    <label>Age: <input [(ngModel)]="age" name="age" required /></label>
+    <label>Date de naissance: <input [(ngModel)]="date_naissance" name="date_naissance" required /></label>
+    <label>Image: <input type="file" (change)="uploadPhoto($event)" name="uploadPhoto" /></label>
+    <button type="submit">Enregistrer</button>
+  </form>
+  

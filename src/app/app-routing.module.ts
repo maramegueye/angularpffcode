@@ -6,7 +6,9 @@ import { ProposComponent } from './propos/propos.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormulaireAdoptionComponent } from './formulaire-adoption/formulaire-adoption.component';
 import { DonsComponent } from './dons/dons.component';
-// import { Error404Component } from './error404/error404.component';
+import { ListEnfantComponent } from './list-enfant/list-enfant.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -18,12 +20,11 @@ const routes: Routes = [
   { path: 'propos', component: ProposComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'formulaire-adoption',component: FormulaireAdoptionComponent},
-  { path: 'dons',component:DonsComponent}
+  { path: 'dons',component:DonsComponent},
+  {path: 'liste_enfants',component:ListEnfantComponent}
 
-  // {path:"**",component:Error404Component}
+  
 ];
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
