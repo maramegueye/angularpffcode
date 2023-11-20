@@ -1,0 +1,20 @@
+    <!-- add-personnel.component.html -->
+    <form (submit)="savePersonnel()">
+        <label>Nom:</label>
+        <input [(ngModel)]="newPersonnel.nom" name="nom" required />
+    
+        <label>Prénom:</label>
+        <input [(ngModel)]="newPersonnel.prenom" name="prenom" required />
+    
+        <label>Profile:</label>
+        <input [(ngModel)]="newPersonnel.profil" name="profil" required />
+    
+        <label>Telephone:</label>
+        <input [(ngModel)]="newPersonnel.telephone" name="telephone" required />
+    
+        <label>Adresse:</label>
+        <input [(ngModel)]="newPersonnel.adresse" name="adresse" required />
+        
+        <button type="submit">Enregistrer</button>
+      </form>
+    

@@ -17,6 +17,12 @@ import { AdminComponent } from './admin/admin.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { DonationComponent } from './donation/donation.component';
 import { EffectiltotalComponent } from './effectiltotal/effectiltotal.component';
+import { ScannerComponent } from './scanner/scanner.component';
+import { PersonnelComponent } from './personnel/personnel.component';
+import { EnfantComponent } from './enfant/enfant.component';
+import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
+import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
+
 
 
 
@@ -34,14 +40,23 @@ import { EffectiltotalComponent } from './effectiltotal/effectiltotal.component'
     RegisterAdoptionComponent,
     AdminComponent,
     DonationComponent,
-    EffectiltotalComponent
+    EffectiltotalComponent,
+    ScannerComponent,
+    PersonnelComponent,
+    AddPersonnelComponent,
+    ListPersonnelComponent,
+    EnfantComponent,
+    ListPersonnelComponent,
+    AddPersonnelComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    FormsModule
   
   ],
   providers: [],

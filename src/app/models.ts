@@ -22,7 +22,42 @@ id?: number
 nbrfilles:string;
 nbrgarcons:string;
 nbrtotal:string;
+entre_enfants:string;
+sotie_enfants:string;
 
   }
-
   
+  // models/personnel.model.ts
+
+export interface Personnel {
+  id: number;
+  nom: string;
+  prenom: string;
+  profil: string;
+  telephone: string;
+  adresse: string;
+}
+
+  export interface Admin{
+    id: number,
+    prenom: string,
+    nom: string,
+    email: string
+  }
+
+  export interface UserDetail{
+    token: string,
+    dateCreation: Date,
+    validate: Date,
+    admin:Admin
+}
+// models.ts
+export interface Enfant {
+  id?: number; // Assuming id is optional or will be assigned on the server
+  prenom: string;
+  nom: string;
+  datenaissance?: Date; // Assuming date of birth is optional or will be assigned on the server
+  photo?: number[]; // Assuming photo is optional or will be assigned on the server
+}
+
+

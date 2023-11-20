@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Donation } from '../models';
 import { DonationService } from '../donation.service';
+import { Router } from '@angular/router'; // Ajoutez l'import pour le service Router
 
 @Component({
   selector: 'app-donation',
@@ -9,33 +10,41 @@ import { DonationService } from '../donation.service';
 })
 export class DonationComponent {
 
-  donation:Donation= {
-    nomcomplet:"",
-    email:"@isepdiamniadio.edu.sn",
+  donation: Donation = {
+    nomcomplet: "",
+    email: "@isepdiamniadio.edu.sn",
     telephone: "",
-    montant:"",
-    operation:"",
-    reference:""
-
+    montant: "",
+    operation: "",
+    reference: ""
   };
-  successMessage:string='';
-  errorMessage:string='';
+  successMessage: string = '';
+  errorMessage: string = '';
 
-  public enregistrer(): void {
-    this.____donationService.enregistrerDemande(this.donation).subscribe(
+  constructor(private donationService: DonationService, private router: Router) { }
+
+  enregistrer(): void {
+    this.donationService.enregistrerDemande(this.donation).subscribe(
       {
-        next:(donation) => {
-          this.successMessage = 'demande enregistre reussi',donation;
+        next: (donation) => {
+          this.successMessage = 'Demande enregistrée avec succès';
           alert('Donation enregistrée avec succès');
-        
         },
-        error: (err)=> {
-          this.errorMessage = ' error de demande.';
+        error: (err) => {
+          this.errorMessage = 'Erreur lors de l\'enregistrement de la demande.';
         }
-        
       }
     );
+  }
 
-}
-constructor(private ____donationService: DonationService){}
+  setOperateur(operateur: string): void {
+    this.donation.operation = operateur;
+    alert(operateur);
+    this.navigateToPage(operateur); // Appeler correctement la méthode navigateToPage
+  }
+
+  navigateToPage(operateur: string): void {
+    // Utilisez la méthode navigate pour naviguer vers une autre page
+    this.router.navigate(['/scanner', operateur]);
+  }
 }

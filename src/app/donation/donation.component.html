@@ -25,14 +25,14 @@
         </div>
         </div>
     </header>
-    <div>{{donation|json}}</div>
+    <!-- <div>{{donation|json}}</div> -->
 
     <div class="container">
         <div class="donation-form">
             <h2>Faire un don</h2>
           <form #demandeForm="ngForm" (ngSubmit)="enregistrer()">
   <div class="trois">
-    <p>Genre :</p>
+    
     <!-- ... (votre code existant) ... -->
   </div>
   <div class="form-group">
@@ -57,14 +57,24 @@
       </div>
       <input type="number" id="montant" name="amount" class="form-control" required [(ngModel)]="donation.montant">
     </div>
-  </div>
+  </div><br>
 
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="operation" name="operation" [(ngModel)]="donation.operation">
-    <label class="form-check-label" for="operation">Opération</label>
-  </div>
+ <!-- Votre code HTML -->
+<!-- Votre code HTML -->
 
-  <div class="form-group form-check">
+<!-- ... votre HTML existant ... -->
+<div class="form-group form-check image-container d-flex justify-content-center align-items-center">
+  <span class="payment-label">Payer par</span>
+  <img src="assets/image/Orange-Money-logo.png" alt="" (click)="navigateToPage('OrangeMoney')" class="img-fluid rounded mr-3" style="max-width: 80px;">
+  <img src="assets/image/logowave.jpeg" alt="" (click)="navigateToPage('Wave')" class="img-fluid rounded-circle mr-3" style="max-width: 60px;">
+  <img src="assets/image/free-money.png" alt="" (click)="navigateToPage('FreeMoney')" class="img-fluid rounded" style="max-width: 80px; margin-right: 15px;">
+</div>
+
+
+
+
+  
+  <!-- <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="reference" name="reference" [(ngModel)]="donation.reference">
     <label class="form-check-label" for="reference">Référence</label>
   </div>
@@ -72,7 +82,7 @@
   <br>
   <div class="form-group">
     <button type="submit" class="btn btn-orange btn-lg" click="enregistrer()">Envoyer</button>
-  </div>
+  </div> -->
 </form>
 
             

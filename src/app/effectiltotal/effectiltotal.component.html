@@ -47,9 +47,21 @@
     <label for="nombreTotal">Nombre total :</label>
     <input type="text" name="nbrtotal" class="form-control" required  [(ngModel)]="effectif.nbrtotal">
     <div class="invalid-feedback">Veuillez saisir le nombre total.</div>
-  </div><br>
-  <button type="submit" class="btn btn-orange" click="enregistrer">Enregistrer</button>
+  </div>
+  <div class="form-group">
+    <label for="nombreGarcons">Nombre d'Entree :</label>
+    <input type="text" name="entre_enfants"  class="form-control" required  [(ngModel)]="effectif.entre_enfants">
+    <div class="invalid-feedback">Veuillez saisir le nombre entre des enfants.</div>
+  </div>
+  <div class="form-group">
+    <label for="nombreGarcons">Nombre de Sortie :</label>
+    <input type="text" name="sotie_enfants"  class="form-control" required  [(ngModel)]="effectif.sotie_enfants">
+    <div class="invalid-feedback">Veuillez saisir le nombre Sotie des enfants.</div><br>
+  </div>
+  <button type="submit"  click="enregistrer"  class="btn btn-orange" style="background-color: #FF6B2C;; color: white;" >Enregistrer</button>
+
 </form>
+
 
       <!-- <img src="assets/image/contact.png" alt="" style="width: 50%; height: 30%;"> -->
     </div>

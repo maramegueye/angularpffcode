@@ -1,0 +1,32 @@
+<div *ngIf="editingPersonnel" class="container mt-4">
+    <h2>Edit Personnel</h2>
+    <form (submit)="updatePersonnel()">
+        <div class="form-group">
+            <label for="nom">Nom:</label>
+            <input [(ngModel)]="updatedPersonnel.nom" name="nom" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="prenom">Prenom:</label>
+            <input [(ngModel)]="updatedPersonnel.prenom" name="prenom" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="profil">Profil:</label>
+            <input [(ngModel)]="updatedPersonnel.profil" name="profil" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Telephone:</label>
+            <input [(ngModel)]="updatedPersonnel.telephone" name="telephone" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="adrresse">Adresse:</label>
+            <input [(ngModel)]="updatedPersonnel.adrresse" name="adrresse" required class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-success">Update Personnel</button>
+        <button type="button" (click)="cancelEdit()" class="btn btn-secondary ml-2">Cancel</button>
+    </form>
+</div>
