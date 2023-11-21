@@ -1,0 +1,18 @@
+<form (submit)="saveAdopteur()">
+    <label>Prénom:</label>
+    <input [(ngModel)]="newAdopteur.prenom" name="prenom" required />
+
+    <label>Nom:</label>
+    <input [(ngModel)]="newAdopteur.nom" name="nom" required />
+
+    <label>Adresse:</label>
+    <input [(ngModel)]="newAdopteur.adresse" name="adresse" required />
+
+    <label>Telephone:</label>
+    <input [(ngModel)]="newAdopteur.telephone" name="telephone" required />
+
+    <label>Email:</label>
+    <input [(ngModel)]="newAdopteur.email" name="email" required />
+    
+    <button type="submit">Enregistrer</button>
+  </form>

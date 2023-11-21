@@ -1,0 +1,60 @@
+<div *ngIf="adopteurs$ | async as adopteurs; else loading" class="container">
+    <h2 class="mt-4 mb-3">adopteur List</h2>
+  
+    <ul class="list-group">
+      <li *ngFor="let adopteur of adopteurs" class="list-group-item">
+        {{ adopteur.prenom }} {{ adopteur.nom }}  - {{ adopteur.adresse }} {{ adopteur.telephone }} 
+        {{ adopteur.email }}
+        <button (click)="editAdopteur(adopteur)" class="btn btn-primary btn-sm mx-1">Edit</button>
+        <button (click)="deleteAdopteur(adopteur.id)" class="btn btn-danger btn-sm mx-1">Delete</button>
+      </li>
+    </ul>
+  
+    <hr class="my-4">
+  
+    <h2 class="mt-4 mb-3">{{ editingAdopteur ? 'Edit Adopteur' : 'Add Adopteur' }}</h2>
+  
+    <form *ngIf="editingAdopteur; else addForm" #editForm="ngForm" (ngSubmit)="updateAdopteur()" class="mb-4">
+      <!-- Edit form fields -->
+      <label for="updatedPrenom">Prenom:</label>
+      <input id="updatedPrenom" type="text" [(ngModel)]="updatedAdopteur.prenom" name="prenom" required class="form-control">
+  
+      <label for="updatedNom">Nom:</label>
+      <input id="updatedNom" type="text" [(ngModel)]="updatedAdopteur.nom" name="nom" required class="form-control">
+
+      <label for="updatedAdresse">Adresse:</label>
+      <input id="updatedAdresse" type="text" [(ngModel)]="updatedAdopteur.adresse" name="adresse" required class="form-control">
+  
+      <label for="updatedTelephone">Telephone:</label>
+      <input id="updatedTelephone" type="text" [(ngModel)]="updatedAdopteur.telephone" name="telephone" required class="form-control">
+  
+      <label for="updatedEmail">Email:</label>
+      <input id="updatedEmail" type="text" [(ngModel)]="updatedAdopteur.email" name="email" required class="form-control">
+      <button type="submit" class="btn btn-success mt-2">Update Personnel</button>
+      <button type="button" (click)="cancelEdit()" class="btn btn-secondary mt-2">Cancel</button>
+    </form>
+  
+    <ng-template #addForm>
+      <form (ngSubmit)="addAdopteur()" class="mb-4">
+        <!-- Add form fields -->
+        <label for="newPrenom">Prenom:</label>
+        <input id="newPrenom" type="text" [(ngModel)]="newAdopteur.prenom" name="prenom" required class="form-control">
+
+        <label for="newNom">Nom:</label>
+        <input id="newNom" type="text" [(ngModel)]="newAdopteur.nom" name="nom" required class="form-control">
+  
+        <label for="newAdresse">Adresse:</label>
+        <input id="newAdresse" type="text" [(ngModel)]="newAdopteur.adresse" name="adresse" required class="form-control">
+  
+        <label for="newTelephone">Telephone:</label>
+        <input id="newTelephone" type="text" [(ngModel)]="newAdopteur.telephone" name="telephone" required class="form-control">
+  
+        <label for="newEmail">Email:</label>
+        <input id="newEmail" type="text" [(ngModel)]="newAdopteur.email" name="email" required class="form-control">
+
+        <button type="submit" class="btn btn-primary mt-2">Add Adopteur</button>
+      </form>
+    </ng-template>
+  </div>
+  
+  <ng-template #loading>Loading...</ng-template>

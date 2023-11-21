@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let adopteur of adopteurs$ | async">
+        {{ adopteur.prenom }} {{ adopteur.nom }}  - {{ adopteur.adresse }} {{adopteur.telephone}} {{adopteur.email}}
+    </li>
+  </ul>

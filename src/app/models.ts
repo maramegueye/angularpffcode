@@ -8,3 +8,24 @@ export interface DemandeAdoption{
     dateDemande?: Date,
     message: string
 }
+
+export interface Salaire {
+    id: number;
+    nom: string;
+    prenom: string;
+    salaire:string;
+    profil: string;
+    telephone: string;
+    adresse: string;
+  }
+
+  export interface Adopteur {
+    id: number;
+    prenom: string;
+    nom: string;
+    adresse: string;
+    telephone: string;
+    email:string;
+     
+  }
+  

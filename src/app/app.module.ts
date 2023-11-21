@@ -17,6 +17,11 @@ import { RegisterAdoptionComponent } from './register-adoption/register-adoption
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { AdopteurComponent } from './adopteur/adopteur.component';
+import { ListeAdopteurComponent } from './liste-adopteur/liste-adopteur.component';
+import { AddAdopteurComponent } from './add-adopteur/add-adopteur.component';
+import { UpdateAdopteurComponent } from './update-adopteur/update-adopteur.component';
+
 
 
 
@@ -33,7 +38,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     ListeEmployesComponent,
     FormulaireAdoptionComponent,
     RegisterAdoptionComponent,
-    AdminComponent
+    AdminComponent,
+    AdopteurComponent,
+    ListeAdopteurComponent,
+    AddAdopteurComponent,
+    UpdateAdopteurComponent,
+   
   ],
   imports: [
     BrowserModule,
