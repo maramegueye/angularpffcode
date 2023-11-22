@@ -1,0 +1,60 @@
+<!-- Display the existing enfanteffectif data -->
+<div class="container mt-3">
+    <h2>Liste  Effectifs des  Enfants</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre de filles</th>
+          <th scope="col">Nombre de garçons</th>
+          <th scope="col">Nombre total</th>
+          <th scope="col">Entre enfants</th>
+          <th scope="col">Sortie enfants</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enfant of enfanteffectif">
+          <td>{{ enfant.nbrfilles }}</td>
+          <td>{{ enfant.nbrgarcons }}</td>
+          <td>{{ enfant.nbrtotal }}</td>
+          <td>{{ enfant.entre_enfants }}</td>
+          <td>{{ enfant.sotie_enfants }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteEnfant(enfant.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Form for adding a new enfant -->
+    <h2>Ajouter Effectif des Enfants </h2>
+    <form (submit)="envoyerServeur()">
+      <div class="mb-3">
+        <label for="nbrfilles" class="form-label">Nombre de filles:</label>
+        <input id="nbrfilles" [(ngModel)]="nouvelEffectif.nbrfilles" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="nbrgarcons" class="form-label">Nombre de garçons:</label>
+        <input id="nbrgarcons" [(ngModel)]="nouvelEffectif.nbrgarcons" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="nbrtotal" class="form-label">Nombre total:</label>
+        <input id="nbrtotal" [(ngModel)]="nouvelEffectif.nbrtotal" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="entre_enfants" class="form-label">Entre enfants:</label>
+        <input id="entre_enfants" [(ngModel)]="nouvelEffectif.entre_enfants" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="sortie_enfants" class="form-label">Sortie enfants:</label>
+        <input id="sortie_enfants" [(ngModel)]="nouvelEffectif.sotie_enfants" class="form-control" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+  </div>
+  

@@ -8,11 +8,13 @@ import { FormulaireAdoptionComponent } from './formulaire-adoption/formulaire-ad
 import { DonationComponent } from './donation/donation.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { EnfantComponent } from './enfant/enfant.component';
-import { EffectiltotalComponent } from './effectiltotal/effectiltotal.component';
 import { AdminComponent } from './admin/admin.component';
 import { PersonnelComponent } from './personnel/personnel.component';
 import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
 import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
+import { EnfanteffectifComponent } from './enfanteffectif/enfanteffectif.component';
+import { AdopteurComponent } from './adopteur/adopteur.component';
+
 
 // import { Error404Component } from './error404/error404.component';
 
@@ -30,11 +32,13 @@ const routes: Routes = [
   { path: 'donation',component: DonationComponent},
   { path: 'authentification',component: AuthentificationComponent},
   { path: 'enfant',component: EnfantComponent},
-  {path: 'effectiftotal',component: EffectiltotalComponent},
   {path: 'admin',component:AdminComponent},
   {path: 'personnel',component:PersonnelComponent},
   {path: 'list-personnel',component: ListPersonnelComponent},
-  {path: 'add-personnel',component: AddPersonnelComponent}
+  {path: 'add-personnel',component: AddPersonnelComponent},
+  {path: 'enfanteffectif',component: EnfanteffectifComponent},
+  {path: 'adopteur',component: AdopteurComponent}
+ 
 
  
 

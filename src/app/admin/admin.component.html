@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -13,29 +12,381 @@
         <div class="container">
         <div class="header-content">
         <img src="assets/image/logo.svg" class="logo" alt="">
-        <div>
+
+        <div >
             <ul class="main-menu">
-                <li><a routerLink="/acceuil">Accueil</a></li>
-                <li><a routerLink="/activites">Nos Activites</a></li>
-                <li><a routerLink="/propos">A propos</a></li>
-                <li><a routerLink="/contact">Nous Contacter</a></li> 
-                <li><a routerLink="/dons">Faire Don</a></li>  
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Nos Activites</a></li>
+                <li><a href="">A propos</a></li>
+                <li><a href="">Nous Contacter</a></li> 
+                <li><a href="" >Faire Don</a></li> 
+                
             </ul>
         </div>
         </div>
         </div>
-        </div>
+    </div>
     </header>
-    <div class="jumbo">
-        <div class="dasbord">
-              <a href="">Personnels</a>
-              <a href="">Effectif Total</a>
-               <a href="">Les Rendez-vous</a>
-               <a href="">Les Demandes</a>
-               <a href="">Entrer et Sortis Des Enfants</a>
-               <a href="">Listes des Adopteurs</a>
-               <a href=""></a>
+    <div class="container">
+    <div class="grand_parents">
+    <div class="dash">
+        <div class="dash-sidebar">
+            <div class="container">
+                <img src="images/vhimage.png" class="logo-img" alt="">
+            </div>
+            <ul class="dash-navigation">
+                
+                    <a  routerLink="/personnel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M2 22H22" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.9502 22L3.0002 9.96999C3.0002 9.35999 3.2902 8.78004 3.7702 8.40004L10.7702 2.95003C11.4902 2.39003 12.5002 2.39003 13.2302 2.95003L20.2302 8.39003C20.7202 8.77003 21.0002 9.34999 21.0002 9.96999V22" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
+                            <path d="M15.5 11H8.5C7.67 11 7 11.67 7 12.5V22H17V12.5C17 11.67 16.33 11 15.5 11Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 16.25V17.75" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 7.5H13.5" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <span>Personnels</span>
+                    </a>
+                
+                    
+                    <a routerLink="/enfanteffectif">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M11.4599 13.73C13.0118 13.73 14.2699 12.4719 14.2699 10.92C14.2699 9.36806 13.0118 8.10999 11.4599 8.10999C9.90798 8.10999 8.6499 9.36806 8.6499 10.92C8.6499 12.4719 9.90798 13.73 11.4599 13.73Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.65 20.2C16.65 17.87 14.33 15.97 11.46 15.97C8.59002 15.97 6.27002 17.86 6.27002 20.2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12.5C21 17.75 16.75 22 11.5 22C6.25 22 2 17.75 2 12.5C2 7.25 6.25 3 11.5 3C12.81 3 14.06 3.25999 15.2 3.73999C15.07 4.13999 15 4.56 15 5C15 5.75 15.21 6.46 15.58 7.06C15.78 7.4 16.04 7.70997 16.34 7.96997C17.04 8.60997 17.97 9 19 9C19.44 9 19.86 8.92998 20.25 8.78998C20.73 9.92998 21 11.19 21 12.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 5C23 5.32 22.96 5.62999 22.88 5.92999C22.79 6.32999 22.63 6.72 22.42 7.06C21.94 7.87 21.17 8.49998 20.25 8.78998C19.86 8.92998 19.44 9 19 9C17.97 9 17.04 8.60997 16.34 7.96997C16.04 7.70997 15.78 7.4 15.58 7.06C15.21 6.46 15 5.75 15 5C15 4.56 15.07 4.13999 15.2 3.73999C15.39 3.15999 15.71 2.64002 16.13 2.21002C16.86 1.46002 17.88 1 19 1C20.18 1 21.25 1.51002 21.97 2.33002C22.61 3.04002 23 3.98 23 5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.4898 4.97998H17.5098" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 3.52002V6.51001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span >Effectif Total</span>
+                    </a>
+
+               
+                    
+                    <a routerLink="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M2 8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5H7" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 16.5H8" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12.5H5" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <span>Les Rendez-vous</span>
+                    </a>
+
+              
+                    
+                    <a routerLink="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H16C20 2 22 4 22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 8H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 13H13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>Les Demandes</span>
+                    </a>
+
+              
+                    
+                    <a routerLink="/enfanteffectif">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18.0001 7.16C17.9401 7.15 17.8701 7.15 17.8101 7.16C16.4301 7.11 15.3301 5.98 15.3301 4.58C15.3301 3.15 16.4801 2 17.9101 2C19.3401 2 20.4901 3.16 20.4901 4.58C20.4801 5.98 19.3801 7.11 18.0001 7.16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.9699 14.44C18.3399 14.67 19.8499 14.43 20.9099 13.72C22.3199 12.78 22.3199 11.24 20.9099 10.3C19.8399 9.59004 18.3099 9.35003 16.9399 9.59003" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.96998 7.16C6.02998 7.15 6.09998 7.15 6.15998 7.16C7.53998 7.11 8.63998 5.98 8.63998 4.58C8.63998 3.15 7.48998 2 6.05998 2C4.62998 2 3.47998 3.16 3.47998 4.58C3.48998 5.98 4.58998 7.11 5.96998 7.16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.99994 14.44C5.62994 14.67 4.11994 14.43 3.05994 13.72C1.64994 12.78 1.64994 11.24 3.05994 10.3C4.12994 9.59004 5.65994 9.35003 7.02994 9.59003" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.0001 14.63C11.9401 14.62 11.8701 14.62 11.8101 14.63C10.4301 14.58 9.33008 13.45 9.33008 12.05C9.33008 10.62 10.4801 9.46997 11.9101 9.46997C13.3401 9.46997 14.4901 10.63 14.4901 12.05C14.4801 13.45 13.3801 14.59 12.0001 14.63Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.09021 17.78C7.68021 18.72 7.68021 20.26 9.09021 21.2C10.6902 22.27 13.3102 22.27 14.9102 21.2C16.3202 20.26 16.3202 18.72 14.9102 17.78C13.3202 16.72 10.6902 16.72 9.09021 17.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>Entrer et Sortis Des Enfants</span>
+                    </a>
+
+              
+                    
+                    <a routerLink="/adopteur">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                            <path d="M12 10.5C14.7614 10.5 17 8.54125 17 6.125C17 3.70875 14.7614 1.75 12 1.75C9.23858 1.75 7 3.70875 7 6.125C7 8.54125 9.23858 10.5 12 10.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.2101 13.7724L15.67 16.8699C15.53 16.9924 15.4 17.2199 15.37 17.3861L15.18 18.5674C15.11 18.9961 15.45 19.2936 15.94 19.2324L17.29 19.0661C17.48 19.0399 17.75 18.9261 17.88 18.8036L21.42 15.7062C22.03 15.1724 22.32 14.5511 21.42 13.7636C20.53 12.9849 19.8201 13.2386 19.2101 13.7724Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.7002 14.2188C19.0002 15.1638 19.8402 15.8987 20.9202 16.1612" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.41016 19.25C3.41016 15.8638 7.26018 13.125 12.0002 13.125C13.0402 13.125 14.0402 13.2562 14.9702 13.5012" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>Listes des Adopteurs</span>
+                    </a>
+
+               
+                    
+                    <a routerLink="/personnel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 6V18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H15C20 2 22 4 22 9V15C22 20 20 22 15 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>Listes des Salaires</span>
+                    </a>
+
+               
+                    
+                    <a routerLink="/enfant">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18.0001 7.16C17.9401 7.15 17.8701 7.15 17.8101 7.16C16.4301 7.11 15.3301 5.98 15.3301 4.58C15.3301 3.15 16.4801 2 17.9101 2C19.3401 2 20.4901 3.16 20.4901 4.58C20.4801 5.98 19.3801 7.11 18.0001 7.16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.9699 14.4399C18.3399 14.6699 19.8499 14.4299 20.9099 13.7199C22.3199 12.7799 22.3199 11.2399 20.9099 10.2999C19.8399 9.58992 18.3099 9.34991 16.9399 9.58991" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.96998 7.16C6.02998 7.15 6.09998 7.15 6.15998 7.16C7.53998 7.11 8.63998 5.98 8.63998 4.58C8.63998 3.15 7.48998 2 6.05998 2C4.62998 2 3.47998 3.16 3.47998 4.58C3.48998 5.98 4.58998 7.11 5.96998 7.16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.99994 14.4399C5.62994 14.6699 4.11994 14.4299 3.05994 13.7199C1.64994 12.7799 1.64994 11.2399 3.05994 10.2999C4.12994 9.58992 5.65994 9.34991 7.02994 9.58991" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.0001 14.63C11.9401 14.62 11.8701 14.62 11.8101 14.63C10.4301 14.58 9.33008 13.45 9.33008 12.05C9.33008 10.62 10.4801 9.46997 11.9101 9.46997C13.3401 9.46997 14.4901 10.63 14.4901 12.05C14.4801 13.45 13.3801 14.59 12.0001 14.63Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.09021 17.7799C7.68021 18.7199 7.68021 20.2599 9.09021 21.1999C10.6902 22.2699 13.3102 22.2699 14.9102 21.1999C16.3202 20.2599 16.3202 18.7199 14.9102 17.7799C13.3202 16.7199 10.6902 16.7199 9.09021 17.7799Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>Listes des Enfants</span>
+                    </a>
+
+                
+            </ul>
+
         </div>
     </div>
-    </body>
-    </html>
+   
+    <div class="dash-content">
+        <div class="parentsDash">
+            <div class="apres-dash">
+                <div class="apres-dashText">
+                    <h1>Nombres d’Enfants</h1>
+                    <p>46 <span>Sortis | </span>32 <span>Entrer</span></p>
+                </div>
+            </div>
+            <div class="apres-dash3">
+                <div class="apres-dashText1">
+                    <h1>Nombres de Visites</h1>
+                    <p>22 <span>Visiteurs</span></p>
+                </div>
+            </div>
+            <div class="apres-dash">
+                <div class="apres-dashText">
+                    <h1>Nombres  De Salariers</h1>
+                    <p>10 <span>Salariers</span></p>
+                </div>
+            </div>
+
+            </div>
+            <div class="group-hello2">
+                <div class="apres-dash1">
+                    <div class="apres-dashText">
+                        <h1>Agenda des Adoptions</h1>
+                    </div>
+                    <div class="monprenom">
+                        <p class="nomAgenda">Mouhamed Barry  <span class=" date">23/04/2024</span></p>
+                        <a href="" class=" Valider">Valider</a>
+                    </div>
+                        <p class="heure">08h45mn</p>
+                        <div class="monprenom">
+                            <p class="nomAgenda">Maimouna Diop  <span class=" date">23/04/2024</span></p>
+                            <a href="" class=" Valider">Valider</a>
+                        </div>
+                            <p class="heure">08h45mn</p>
+                            <div class="monprenom">
+                                <p class="nomAgenda">Cheikh Ndiaye  <span class=" date">23/04/2024</span></p>
+                                <a href="" class=" Valider">Valider</a>
+                            </div>
+                                <p class="heure">08h45mn</p>
+                
+                    </div>
+
+                    <div class="apres-dash1">
+                        <div class="apres-dashTextGestion">
+                            <h1>Gestion des Chambres</h1>
+                        </div>
+                        <div class="Gestiongroup">
+                        <p class="Gestion">15 <span>chambres</span></p>
+                        <p class="Gestion">4 <span>chambres Bébé</span></p>
+                        <p class="Gestion">6 <span>chambres Filles</span></p>
+                        <p class="Gestion">5 <span>chambres Garçons</span></p>
+                    
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group-hello3">
+                    <div class="hello">
+                        <table class="table " >
+                            <tbody class="entete">
+                            <tr >
+                                <th>Heuraire</th>
+                                <th>Lundi </th>
+                                <th>Mardi</th>
+                                <th >Mercredi</th>
+                                <th >Jeudi</th>
+                                <th>Vendredi</th>
+                                <th >Samedi</th>
+                                <th >Dimanche</th>
+                            </tr>
+                        </tbody>
+                            <tbody>
+                              <tr>
+                                <td>08h00</td>
+                                <td class="rowTd">Petit Déjeuner</td>
+                                <td class="rowTd">Petit Déjeuner </td>
+                                <td class="rowTd">Petit Déjeuner</td>
+                                <td class="rowTd">Petit Déjeuner</td>
+                                <td class="rowTd">Petit Déjeuner </td>
+                                <td class="rowTd">Petit Déjeuner</td>
+                                <td class="rowTd">Petit Déjeuner</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>10h 12h</td>
+                                <td class="rowTd">Activite pedagogique</td>
+                                <td class="rowTd">Activite pedagogique</td>
+                                <td class="rowTd">Activite pedagogique</td>
+                                <td class="rowTd">Activite pedagogique</td>
+                                <td class="rowTd">Activite pedagogique </td>
+                                <td class="rowTd">Jour visite</td>
+                                <td class="rowTd">Promonade</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>12h 13h</td>
+                                <td class="rowTd">Repas</td>
+                                <td class="rowTd">Repas</td>
+                                <td class="rowTd">Repas</td>
+                                <td class="rowTd">Repas</td>
+                                <td class="rowTd">Repas </td>
+                                <td class="rowTd">Repas</td>
+                                <td class="rowTd">Repas</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>14h00</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>15h00 16h00</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                <td class="rowTd">Detente</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>17h00 </td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">jour visit</td>
+                                <td class="rowTd">Promonade</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>18h00</td>
+                                <td class="rowTd">Revision Coran</td>
+                                <td class="rowTd">Revision Coran</td>
+                                <td class="rowTd">Revision Coran</td>
+                                <td class="rowTd">Revision Coran</td>
+                                <td class="rowTd">Revision Coran</td>
+                                <td class="rowTd">FootBall</td>
+                                <td class="rowTd">Tailkundo</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>19h00</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                <td class="rowTd">Priére</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>19h00 20h00</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                <td class="rowTd">Dîner</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>20h00 21h00</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                <td class="rowTd">Coucher</td>
+                                
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            
+        
+            
+        </div>
+    </div>    
+
+
+</div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="content-footer">
+            <div class="footer-cols">
+            <div class="Contact">
+        <h4 class="menu-footer ">Contact</h4>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z" stroke="#919396" stroke-width="1.5" stroke-miterlimit="10"/>
+            <path d="M18.5 9C18.5 8.4 18.03 7.48 17.33 6.73C16.69 6.04 15.84 5.5 15 5.5" stroke="#919396" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 9C22 5.13 18.87 2 15 2" stroke="#919396" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>+221 33 231 39 62</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ADB0B4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#ADB0B4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>info@example.com</p>
+        </div>
+
+        <div class="Contact">
+            <h4 class="menu-footer" style="max-width: 540px;">Menu</h4>
+            <p>Acceuil</p>
+            <p>Nos Activité</p>
+            <p>A Propos</p>
+            <p>Nous Contacter</p>
+        </div>
+        <div class="Contact">
+            <h4 class="menu-footer" style="max-width: 540px; ">Photo Gallery</h4>
+            <img src="assets/image/Group 135.png" alt="">
+        </div>
+        <div class="Contact">
+            <h4 class="menu-footer" style="max-width: 540px;">Newsletter</h4>
+            <p class="p-input">Your Email</p>
+            <form action="">
+                <input type="text">
+            </form><br>
+            <a class="signup" href="">SignUp</a>
+            
+        </div>
+    </div>
+    <div class="icons">
+        <img src="assets/image/Ellipse 11.svg" alt="">
+        <img src="assets/image/Ellipse 12.svg" alt="">
+        <img src="assets/image/Ellipse 13.svg" alt="">
+        <img src="assets/image/Ellipse 14.svg" alt="">
+
+    </div>
+    </div>
+    </div>
+   </footer>
+</body>
+</html>

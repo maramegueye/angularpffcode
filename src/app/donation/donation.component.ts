@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Donation } from '../models';
 import { DonationService } from '../donation.service';
-import { Router } from '@angular/router'; // Ajoutez l'import pour le service Router
+import { Router } from '@angular/router';
+import { WebcamImage, WebcamInitError } from 'ngx-webcam';
 
 @Component({
   selector: 'app-donation',
@@ -20,6 +21,10 @@ export class DonationComponent {
   };
   successMessage: string = '';
   errorMessage: string = '';
+
+  @ViewChild('webcam') webcamElement: any;
+  public showWebcam = false;
+  public webcamImage: WebcamImage | undefined;
 
   constructor(private donationService: DonationService, private router: Router) { }
 
@@ -40,11 +45,31 @@ export class DonationComponent {
   setOperateur(operateur: string): void {
     this.donation.operation = operateur;
     alert(operateur);
-    this.navigateToPage(operateur); // Appeler correctement la méthode navigateToPage
+    this.navigateToPage(operateur);
   }
 
   navigateToPage(operateur: string): void {
-    // Utilisez la méthode navigate pour naviguer vers une autre page
-    this.router.navigate(['/scanner', operateur]);
+    this.router.navigateByUrl('/scanner');
+  }
+
+  public toggleWebcam(): void {
+    this.showWebcam = !this.showWebcam;
+  }
+
+  public handleImage(webcamImage: WebcamImage): void {
+    this.webcamImage = webcamImage;
+    // You can do something with the captured image here
+  }
+
+  public handleInitError(error: WebcamInitError): void {
+    console.error('Webcam initialization failed:', error);
+  }
+
+  public startCapture(): void {
+    this.showWebcam = true;
+  }
+
+  public stopCapture(): void {
+    this.showWebcam = false;
   }
 }

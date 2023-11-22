@@ -14,6 +14,7 @@ export class AddPersonnelComponent implements OnInit {
     profil: '',
     telephone: '',
     adresse: '',
+    salaire:'',
     id: 0
   };
 
@@ -49,7 +50,8 @@ export class AddPersonnelComponent implements OnInit {
       this.newPersonnel.prenom.trim() !== '' &&
       this.newPersonnel.profil.trim() !== '' &&
       this.newPersonnel.telephone.trim() !== '' &&
-      this.newPersonnel.adresse.trim() !== ''
+      this.newPersonnel.adresse.trim() !== '' &&
+      this.newPersonnel.salaire.trim() !== '' 
     );
   }
 }

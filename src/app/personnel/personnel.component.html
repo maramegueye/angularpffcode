@@ -1,17 +1,35 @@
 <!-- personnel.component.html -->
 
-<div *ngIf="personnels$ | async as personnels; else loading" class="container">
+<div *ngIf="personnels$ | async as personnels; else loading" class="container main-container">
   <h2 class="mt-4 mb-3">Personnel List</h2>
 
-  <ul class="list-group">
-    <li *ngFor="let personnel of personnels" class="list-group-item">
-      {{ personnel.nom }} {{ personnel.prenom }} - {{ personnel.profil }} {{ personnel.telephone }} 
-      {{ personnel.adresse }}
-      <button (click)="editPersonnel(personnel)" class="btn btn-primary btn-sm mx-1">Edit</button>
-      <button (click)="deletePersonnel(personnel.id)" class="btn btn-danger btn-sm mx-1">Delete</button>
-    </li>
-  </ul>
-
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Profil</th>
+        <th>Telephone</th>
+        <th>Adresse</th>
+        <th>Salaire</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let personnel of personnels">
+        <td>{{ personnel.nom }}</td>
+        <td>{{ personnel.prenom }}</td>
+        <td>{{ personnel.profil }}</td>
+        <td>{{ personnel.telephone }}</td>
+        <td>{{ personnel.adresse }}</td>
+        <td>{{ personnel.salaire }}</td>
+        <td>
+          <button (click)="editPersonnel(personnel)" class="btn btn-primary btn-sm mx-1">Edit</button>
+          <button (click)="deletePersonnel(personnel.id)" class="btn btn-danger btn-sm mx-1">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <hr class="my-4">
 
   <h2 class="mt-4 mb-3">{{ editingPersonnel ? 'Edit Personnel' : 'Add Personnel' }}</h2>
@@ -26,12 +44,15 @@
 
     <label for="updatedProfil">Profil:</label>
     <input id="updatedProfil" type="text" [(ngModel)]="updatedPersonnel.profil" name="profil" required class="form-control">
-   
+
     <label for="updatedTelephone">Telephone:</label>
     <input id="updatedTelephone" type="text" [(ngModel)]="updatedPersonnel.telephone" name="telephone" required class="form-control">
-    
+
     <label for="updatedAdresse">Adresse:</label>
     <input id="updatedAdresse" type="text" [(ngModel)]="updatedPersonnel.adresse" name="adresse" required class="form-control">
+
+    <label for="updatedSalaire">Salaire:</label>
+    <input id="updatedSalaire" type="text" [(ngModel)]="updatedPersonnel.salaire" name="salaire" required class="form-control">
 
     <button type="submit" class="btn btn-success mt-2">Update Personnel</button>
     <button type="button" (click)="cancelEdit()" class="btn btn-secondary mt-2">Cancel</button>
@@ -54,6 +75,9 @@
 
       <label for="newAdresse">Adresse:</label>
       <input id="newAdresse" type="text" [(ngModel)]="newPersonnel.adresse" name="adresse" required class="form-control">
+
+      <label for="newSalaire">Salaire:</label>
+      <input id="newSalaire" type="text" [(ngModel)]="newPersonnel.salaire" name="salaire" required class="form-control">
 
       <button type="submit" class="btn btn-primary mt-2">Add Personnel</button>
     </form>

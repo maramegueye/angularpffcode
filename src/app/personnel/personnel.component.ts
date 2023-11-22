@@ -1,3 +1,4 @@
+// personnel.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Personnel } from '../models';
@@ -11,7 +12,7 @@ import { PersonnelService } from '../personnel.service';
 export class PersonnelComponent implements OnInit {
 
   editingPersonnel: boolean = false;
-  updatedPersonnel: Personnel = { id: 0, nom: '', prenom: '', profil: '', telephone: '', adresse: '' };
+  updatedPersonnel: Personnel = { id: 0, nom: '', prenom: '', profil: '', telephone: '', adresse: '',  salaire: '' };
 
   newPersonnel: Personnel = {
     id: 0,
@@ -19,7 +20,8 @@ export class PersonnelComponent implements OnInit {
     prenom: '',
     profil: '',
     telephone: '',
-    adresse: ''
+    adresse: '',
+    salaire: ''
   };
 
   personnels$: Observable<Personnel[]> | undefined;
@@ -39,7 +41,8 @@ export class PersonnelComponent implements OnInit {
         prenom: '',
         profil: '',
         telephone: '',
-        adresse: ''
+        adresse: '',
+        salaire: ''
       };
     });
   }
@@ -59,7 +62,6 @@ export class PersonnelComponent implements OnInit {
       console.error('ID is undefined');
     }
   }
-  
 
   editPersonnel(personnel: Personnel) {
     this.editingPersonnel = true;
@@ -77,9 +79,10 @@ export class PersonnelComponent implements OnInit {
     }
   }
 
+
   cancelEdit() {
     this.editingPersonnel = false;
-    this.updatedPersonnel = { id: 0, nom: '', prenom: '', profil: '', telephone: '', adresse: '' };
+    this.updatedPersonnel = { id: 0, nom: '', prenom: '', profil: '', telephone: '', adresse: '',  salaire: '' };
   }
 
   private loadPersonnels() {

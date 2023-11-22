@@ -16,12 +16,14 @@ import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { DonationComponent } from './donation/donation.component';
-import { EffectiltotalComponent } from './effectiltotal/effectiltotal.component';
 import { ScannerComponent } from './scanner/scanner.component';
 import { PersonnelComponent } from './personnel/personnel.component';
 import { EnfantComponent } from './enfant/enfant.component';
 import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
 import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
+import { EnfanteffectifComponent } from './enfanteffectif/enfanteffectif.component';
+import { AdopteurComponent } from './adopteur/adopteur.component';
+import { WebcamModule } from 'ngx-webcam';
 
 
 
@@ -40,7 +42,6 @@ import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
     RegisterAdoptionComponent,
     AdminComponent,
     DonationComponent,
-    EffectiltotalComponent,
     ScannerComponent,
     PersonnelComponent,
     AddPersonnelComponent,
@@ -48,6 +49,10 @@ import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
     EnfantComponent,
     ListPersonnelComponent,
     AddPersonnelComponent,
+    EnfanteffectifComponent,
+    AdopteurComponent,
+
+
     
    
   ],
@@ -56,7 +61,9 @@ import { AddPersonnelComponent } from './add-personnel/add-personnel.component';
     AppRoutingModule,
     HttpClientModule,
     SlickCarouselModule,
-    FormsModule
+    FormsModule,
+    WebcamModule
+  
   
   ],
   providers: [],

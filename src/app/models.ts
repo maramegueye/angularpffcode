@@ -17,7 +17,7 @@ export interface Donation {
     operation?: string;
     reference?: string;
   }
-export interface Effectif{
+export interface Enfanteffectif{
 id?: number
 nbrfilles:string;
 nbrgarcons:string;
@@ -36,6 +36,7 @@ export interface Personnel {
   profil: string;
   telephone: string;
   adresse: string;
+  salaire: string;
 }
 
   export interface Admin{
@@ -59,5 +60,16 @@ export interface Enfant {
   datenaissance?: Date; // Assuming date of birth is optional or will be assigned on the server
   photo?: number[]; // Assuming photo is optional or will be assigned on the server
 }
+
+export interface Adopteur{
+id?: number,
+prenom: string,
+nom: string,
+adresse: string,
+telephone: string,
+email: string
+}
+
+
 
 

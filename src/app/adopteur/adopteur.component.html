@@ -1,0 +1,81 @@
+<!-- adopteur.component.html -->
+
+<div class="container mt-3" style="background-color: #f0f0f0;"> <!-- Set your desired background color -->
+    <div *ngIf="adopteurs$ | async as adopteurs; else loading">
+        <h2 class="mt-4 mb-3">Liste Des Adopteur</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Adresse</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let adopteur of adopteurs">
+            <td>{{ adopteur.nom }}</td>
+            <td>{{ adopteur.prenom }}</td>
+            <td>{{ adopteur.adresse }}</td>
+            <td>{{ adopteur.telephone }}</td>
+            <td>{{ adopteur.email }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editAdopteur(adopteur)" *ngIf="!editingAdopteur">Edit</button>
+              <button class="btn btn-danger" (click)="deleteAdopteur(adopteur.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="mt-4 mb-3">Ajouter Des Adopteur</h2>
+  
+      <div *ngIf="editingAdopteur" class="card mt-3">
+      
+        <div class="card-body">
+          <!-- Form for editing adopteur -->
+          <div class="form-group">
+            <input [(ngModel)]="updatedAdopteur.nom" class="form-control" placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="updatedAdopteur.prenom" class="form-control" placeholder="Prenom">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="updatedAdopteur.adresse" class="form-control" placeholder="Adresse">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="updatedAdopteur.telephone" class="form-control" placeholder="Telephone">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="updatedAdopteur.email" class="form-control" placeholder="Email">
+          </div>
+          <button class="btn btn-success" (click)="updateAdopteur()">Update</button>
+          <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+        </div>
+      </div>
+  
+      <!-- Form for adding new adopteur -->
+      <div *ngIf="!editingAdopteur" class="card mt-3">
+        <div class="card-body">
+          <div class="form-group">
+            <input [(ngModel)]="newAdopteur.nom" class="form-control" placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newAdopteur.prenom" class="form-control" placeholder="Prenom">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newAdopteur.adresse" class="form-control" placeholder="Adresse">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newAdopteur.telephone" class="form-control" placeholder="Telephone">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newAdopteur.email" class="form-control" placeholder="Email">
+          </div>
+          <button class="btn btn-primary" (click)="addAdopteur()">Add Adopteur</button>
+        </div>
+      </div>
+    </div>
+  
+    <ng-template #loading>Loading adopteurs...</ng-template>
+  </div>

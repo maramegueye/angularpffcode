@@ -1,14 +1,14 @@
-// import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute } from '@angular/router';
-// import { Personnel } from '../models';
-// import { PersonnelService } from '../personnel.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Personnel } from '../models';
+import { PersonnelService } from '../personnel.service';
 
-// @Component({
-//   selector: 'app-update-personnel',
-//   templateUrl: './update-personnel.component.html',
-//   styleUrls: ['./update-personnel.component.scss']
-// })
-// export class UpdatePersonnelComponent implements OnInit {
+@Component({
+  selector: 'app-update-personnel',
+  templateUrl: './update-personnel.component.html',
+  styleUrls: ['./update-personnel.component.scss']
+})
+export class UpdatePersonnelComponent {
 //   updatedPersonnel: Personnel = { id: 0, nom: '', prenom: '', profil: '', telephone: '', adrresse: '' };
 
 //   constructor(
@@ -42,4 +42,4 @@
 //     // Ajoutez le traitement nécessaire pour annuler la modification
 //     console.log('Modification annulée.');
 //   }
-// }
+}
