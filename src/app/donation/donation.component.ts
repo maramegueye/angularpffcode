@@ -1,8 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Donation } from '../models';
 import { DonationService } from '../donation.service';
 import { Router } from '@angular/router';
-import { WebcamImage, WebcamInitError } from 'ngx-webcam';
 
 @Component({
   selector: 'app-donation',
@@ -12,64 +11,50 @@ import { WebcamImage, WebcamInitError } from 'ngx-webcam';
 export class DonationComponent {
 
   donation: Donation = {
-    nomcomplet: "",
-    email: "@isepdiamniadio.edu.sn",
-    telephone: "",
-    montant: "",
-    operation: "",
-    reference: ""
+    nomcomplet: '',
+    email: '@isepdiamniadio.edu.sn',
+    telephone: '',
+    montant: '',
+    operation: '',
+    reference: ''
   };
   successMessage: string = '';
   errorMessage: string = '';
 
-  @ViewChild('webcam') webcamElement: any;
-  public showWebcam = false;
-  public webcamImage: WebcamImage | undefined;
+  selectedPaymentMethod: string = '';
 
   constructor(private donationService: DonationService, private router: Router) { }
 
   enregistrer(): void {
     this.donationService.enregistrerDemande(this.donation).subscribe(
-      {
-        next: (donation) => {
-          this.successMessage = 'Demande enregistrée avec succès';
-          alert('Donation enregistrée avec succès');
-        },
-        error: (err) => {
-          this.errorMessage = 'Erreur lors de l\'enregistrement de la demande.';
-        }
+      (donation) => {
+        this.successMessage = 'Demande enregistrée avec succès';
+        alert('Donation enregistrée avec succès');
+      },
+      (err) => {
+        this.errorMessage = 'Erreur lors de l\'enregistrement de la demande.';
       }
     );
   }
+  captureOrangeMoneyDetails(): void {
+    const amount = prompt('Entrez le montant du don:');
+    const reference = prompt('Saisissez la référence de la transaction :');
+    // alert('les donnes sont enregistrer merci')
+    
+    // Validate if the user entered the amount and reference
+    if (amount !== null && reference !== null) {
+      // Set the captured values to the donation object
+      this.donation.montant = amount;
+      this.donation.reference = reference;
 
-  setOperateur(operateur: string): void {
-    this.donation.operation = operateur;
-    alert(operateur);
-    this.navigateToPage(operateur);
+      alert('Détails du don capturés avec succès Merci!');
+    }
   }
 
-  navigateToPage(operateur: string): void {
-    this.router.navigateByUrl('/scanner');
-  }
-
-  public toggleWebcam(): void {
-    this.showWebcam = !this.showWebcam;
-  }
-
-  public handleImage(webcamImage: WebcamImage): void {
-    this.webcamImage = webcamImage;
-    // You can do something with the captured image here
-  }
-
-  public handleInitError(error: WebcamInitError): void {
-    console.error('Webcam initialization failed:', error);
-  }
-
-  public startCapture(): void {
-    this.showWebcam = true;
-  }
-
-  public stopCapture(): void {
-    this.showWebcam = false;
+  navigateToPage(paymentMethod: string): void {
+    // You can implement navigation logic here based on the selected payment method
+    this.selectedPaymentMethod = paymentMethod;
+    this.router.navigate(['/payment', paymentMethod]); // Adjust the route accordingly
   }
 }
+

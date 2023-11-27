@@ -7,6 +7,7 @@ import { Donation } from './models';
   providedIn: 'root'
 })
 export class DonationService {
+  apiUrl: any;
 
   constructor(private _httpClient: HttpClient) { }
 
@@ -22,4 +23,9 @@ export class DonationService {
   return this._httpClient.put<Donation>(url, donation, { headers });
  
  }
+ enregistrerDonationAvecMethode(donation: Donation, methode: string): Observable<any> {
+  // Ajoutez ici la logique d'appel à votre API avec la méthode de paiement spécifique
+  const url = `${this.apiUrl}/donation/${methode}`;
+  return this._httpClient.post(url, donation);
+}
 }

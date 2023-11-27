@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'donation',component: DonationComponent},
   { path: 'authentification',component: AuthentificationComponent},
   { path: 'enfant',component: EnfantComponent},
-  {path: 'admin',component:AdminComponent},
+  { path: 'admin', component: AdminComponent },
   {path: 'personnel',component:PersonnelComponent},
   {path: 'list-personnel',component: ListPersonnelComponent},
   {path: 'add-personnel',component: AddPersonnelComponent},

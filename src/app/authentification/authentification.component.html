@@ -28,6 +28,11 @@ password = {{password}}
   
       <button class="button green">envoyer</button>
       <p>Mot de Passe Oublie ?</p>
+
+      <div *ngIf="loginError">
+        <p style="color: red;">Identifiants incorrects. Veuillez réessayer.</p>
+      </div>
+    
     </form>
   </div>
   

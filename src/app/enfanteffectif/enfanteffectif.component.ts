@@ -15,7 +15,7 @@ export class EnfanteffectifComponent implements OnInit {
     nbrgarcons: '',
     nbrtotal: '',
     entre_enfants: '',
-    sotie_enfants: '' // Corrected the property name to 'sortie_enfants'
+    sortie_enfants: '' // Corrected the property name to 'sortie_enfants'
   };
 
   constructor(private enfanteffectifService: EnfanteffectifService) {}
@@ -42,7 +42,7 @@ export class EnfanteffectifComponent implements OnInit {
     }
   }
 
-  envoyerServeur(): void {  // Changed method name to follow camelCase convention
+  envoyerServeur(): void {
     this.enfanteffectifService.saveEnfant(this.nouvelEffectif).subscribe(() => {
       this.loadEnfants(); // Reload the data after adding a new enfant
       this.resetForm();
@@ -55,8 +55,7 @@ export class EnfanteffectifComponent implements OnInit {
       nbrgarcons: '',
       nbrtotal: '',
       entre_enfants: '',
-      sotie_enfants: ''
-       // Corrected the property name to 'sortie_enfants'
+      sortie_enfants: '' // Corrected the property name to 'sortie_enfants'
     };
   }
 }

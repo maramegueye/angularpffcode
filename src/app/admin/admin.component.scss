@@ -31,6 +31,14 @@ font-weight: 700;
 line-height: normal;
     
 }
+.logout-button {
+    padding: 10px 15px;
+    background-color: #d9534f; /* Couleur de fond pour le bouton Logout (rouge pour cet exemple, adaptez selon vos styles) */
+    color: #fff; /* Couleur du texte pour le bouton Logout (blanc pour cet exemple, adaptez selon vos styles) */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 .dash-navigation a:hover {
     color: black

@@ -9,28 +9,21 @@ import { Enfant } from './models';
 export class EnfantService {
   private baseUrl = 'http://localhost:8080/api/v1/enfants';
 
-  constructor(private __http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getAllEnfants(): Observable<Enfant[]> {
-    return this.__http.get<Enfant[]>(this.baseUrl);
+    return this.http.get<Enfant[]>(this.baseUrl);
   }
 
   getEnfantById(id: number): Observable<Enfant> {
-    return this.__http.get<Enfant>(`${this.baseUrl}/${id}`);
+    return this.http.get<Enfant>(`${this.baseUrl}/${id}`);
   }
 
   deleteEnfant(id: number): Observable<any> {
-    return this.__http.delete(`${this.baseUrl}/${id}`);
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
   saveEnfant(enfant: Enfant): Observable<Enfant> {
-    return this.__http.put<Enfant>(this.baseUrl, enfant);
-  }
-
-  uploadPhoto(enfantId: number, file: File): Observable<any> {
-    const formData: FormData = new FormData();
-    formData.append('file', file);
-
-    return this.__http.put(`${this.baseUrl}/save-photoEnfant/${enfantId}`, formData);
+    return this.http.post<Enfant>(this.baseUrl, enfant);
   }
 }

@@ -23,7 +23,7 @@ nbrfilles:string;
 nbrgarcons:string;
 nbrtotal:string;
 entre_enfants:string;
-sotie_enfants:string;
+sortie_enfants:string;
 
   }
   
